@@ -1,167 +1,177 @@
 body {
-    background: url("bgrb.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover:
+  background: url("bgrb.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#dice-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fluid {
+  padding: 3em;
+}
+
+.roll {
+  -webkit-animation-name: wiggle;
+  -ms-animation-name: wiggle;
+  -ms-animation-duration: 1000ms;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+}
+
+.die {
+  display: inline-block;
+  text-align: center;
+  font-size: 300px;
+  line-height: 0.8;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+
+/* .die:hover {
+  -webkit-animation-name: wiggle;
+  -ms-animation-name: wiggle;
+  -ms-animation-duration: 1000ms;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+} */
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(10deg);
   }
-  
-  #dice-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  25% {
+    -webkit-transform: rotate(-10deg);
   }
-  
-  .container-fluid {
-    padding: 3em;
+  50% {
+    -webkit-transform: rotate(20deg);
   }
-  
-  .die {
-    display: inline-block;
-    text-align: center;
-    font-size: 300px;
-    line-height: 0.8;
-    cursor: pointer;
-    height: 200px;
-    width: 200px;
+  75% {
+    -webkit-transform: rotate(-5deg);
   }
-  
-  .die:hover {
-    -webkit-animation-name: wiggle;
-    -ms-animation-name: wiggle;
-    -ms-animation-duration: 1000ms;
-    -webkit-animation-duration: 1000ms;
-    -webkit-animation-iteration-count: 1;
-    -ms-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in-out;
-    -ms-animation-timing-function: ease-in-out;
+  100% {
+    -webkit-transform: rotate(0deg);
   }
-  
-  @-webkit-keyframes wiggle {
-    0% {
-      -webkit-transform: rotate(10deg);
-    }
-    25% {
-      -webkit-transform: rotate(-10deg);
-    }
-    50% {
-      -webkit-transform: rotate(20deg);
-    }
-    75% {
-      -webkit-transform: rotate(-5deg);
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-    }
+}
+
+@-ms-keyframes wiggle {
+  0% {
+    -ms-transform: rotate(1deg);
   }
-  
-  @-ms-keyframes wiggle {
-    0% {
-      -ms-transform: rotate(1deg);
-    }
-    25% {
-      -ms-transform: rotate(-1deg);
-    }
-    50% {
-      -ms-transform: rotate(1.5deg);
-    }
-    75% {
-      -ms-transform: rotate(-5deg);
-    }
-    100% {
-      -ms-transform: rotate(0deg);
-    }
+  25% {
+    -ms-transform: rotate(-1deg);
   }
-  
-  @keyframes wiggle {
-    0% {
-      transform: rotate(10deg);
-    }
-    25% {
-      transform: rotate(-10deg);
-    }
-    50% {
-      transform: rotate(20deg);
-    }
-    75% {
-      transform: rotate(-5deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+  50% {
+    -ms-transform: rotate(1.5deg);
   }
-  
-  .btn1 {
-    background-color: rgba(255, 192, 203, 0.349);
-    font-family: "Orbitron", sans-serif;
-    font-size: 20px;
-    border: none;
-    color: black;
+  75% {
+    -ms-transform: rotate(-5deg);
   }
-  
-  .btn1:hover,
-  button:focus {
-    background-color: rgba(0, 102, 255, 0.267);
-    outline: none;
+  100% {
+    -ms-transform: rotate(0deg);
   }
-  
-  .btn2 {
-    background-color: rgba(97, 216, 190, 0.349);
-    font-family: "Orbitron", sans-serif;
-    font-size: 20px;
-    border: none;
-    color: black;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg);
   }
-  
-  .btn2:hover,
-  button:focus {
-    background-color: rgba(0, 102, 255, 0.267);
-    outline: none;
+  25% {
+    transform: rotate(-10deg);
   }
-  .btn3 {
-    background-color: rgba(124, 174, 207, 0.349);
-    font-family: "Orbitron", sans-serif;
-    font-size: 20;
-    border: none;
-    color: black;
+  50% {
+    transform: rotate(20deg);
   }
-  .btn3:hover,
-  button:focus {
-    background-color: rgba(0, 102, 255, 0.267);
-    outline: none;
+  75% {
+    transform: rotate(-5deg);
   }
-  
-  .btn4 {
-    background-color: rgba(230, 217, 46, 0.349);
-    font-family: "Orbitron", sans-serif;
-    font-size: 20px;
-    border: none;
-    color: black;
+  100% {
+    transform: rotate(0deg);
   }
-  .btn4:hover,
-  button:focus {
-    background-color: rgba(0, 102, 255, 0.267);
-    outline: none;
-  }
-  
-  .swal-modal {
-    font-family: "Orbitron", sans-serif;
-    width: 478px;
-    opacity: 95%;
-    color: black !important;
-    font-weight: bold !important;
-  }
-  
-  .swal-title {
-    color: black !important;
-    font-weight: bold;
-  }
-  
-  .swal-overlay--show-modal {
-    font-family: "Orbitron", sans-serif;
-    opacity: 95%;
-    color: black !important;
-    font-weight: bold;
-  }
-  
+}
+
+.btn1 {
+  background-color: rgba(255, 192, 203, 0.349);
+  font-family: "Orbitron", sans-serif;
+  font-size: 20px;
+  border: none;
+  color: black;
+}
+
+.btn1:hover,
+button:focus {
+  background-color: rgba(0, 102, 255, 0.267);
+  outline: none;
+}
+
+.btn2 {
+  background-color: rgba(97, 216, 190, 0.349);
+  font-family: "Orbitron", sans-serif;
+  font-size: 20px;
+  border: none;
+  color: black;
+}
+
+.btn2:hover,
+button:focus {
+  background-color: rgba(0, 102, 255, 0.267);
+  outline: none;
+}
+.btn3 {
+  background-color: rgba(124, 174, 207, 0.349);
+  font-family: "Orbitron", sans-serif;
+  font-size: 20;
+  border: none;
+  color: black;
+}
+.btn3:hover,
+button:focus {
+  background-color: rgba(0, 102, 255, 0.267);
+  outline: none;
+}
+
+.btn4 {
+  background-color: rgba(230, 217, 46, 0.349);
+  font-family: "Orbitron", sans-serif;
+  font-size: 20px;
+  border: none;
+  color: black;
+}
+.btn4:hover,
+button:focus {
+  background-color: rgba(0, 102, 255, 0.267);
+  outline: none;
+}
+
+.swal-modal {
+  font-family: "Orbitron", sans-serif;
+  width: 478px;
+  opacity: 95%;
+  color: black !important;
+  font-weight: bold !important;
+}
+
+.swal-title {
+  color: black !important;
+  font-weight: bold;
+}
+
+.swal-overlay--show-modal {
+  font-family: "Orbitron", sans-serif;
+  opacity: 95%;
+  color: black !important;
+  font-weight: bold;
+}
